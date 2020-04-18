@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <head>
+	<base href="http://students.cs.ndsu.nodak.edu/~tubergqu/404_Assignment/">
+        <title>CSCI 404 Ethical Hacking</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    </head>
+    <bod>
+        <div id="div">
+            <br>
+            <h3>This is week 8 assignment for <b>CS 404</b></h3>
+            <p>Turn sound on <img src="src/smiley.png" height="25" width="25"></p>
+            <form id="form">
+                <a href="https://www.ndsu.edu/cs/">NDSU/ComputerScience</a><br>
+                <button type="submit" formaction="https://www.ndsu.edu">GO -> NDSU</button><br>              
+            </form><br>
+            <button onclick="changeBackground()"
+                    style="border: 8px solid black; 
+                           background-color: green;width:300px;height:125px;"                
+                    onclick="changeBackground()"><h1>CLick Me!</h1>
+            </button>
+            <button onclick="location.href='https://www.youtube.com/watch?v=oHg5SJYRHA0';"
+                    style="border: 8px solid black; 
+                           background-color: red;width:300px;height:125px;"                
+                    onclick="changeBackground()"><h1>Don't CLick Me! </h1>
+            </button>
+            <br><br>
+            <button id="kaliBtn" onclick="showKali()">Show Kali</button>
+            <button id="kellyBtn" onclick="showKelly()">Show Kelly</button><br><br>
+            <p id="kellyDescription">This is Kelly, she is a 11 week old lab.</p>
+            <img id="kali" src="src/kali.jpg" height="270" width="480"><br>
+            <img id="kelly" src="src/kelly.jpg" height="409" width="307"><br>              
+        </div>
+        <p id="haha" style="color: white">Ha! better refresh</p> 
+        <audio id="ahahah" src="src/ahahah.mp3" preload="auto"></audio>
+        
+        <script>
+            window.onload = function(){                
+                $("#haha").hide();
+                $("#kellyDescription").hide();
+                $("#kali").hide();
+                $("#kelly").hide();
+            }
+            function changeBackground(){
+                document.body.style.background = 'black';
+                var clip = document.getElementById("ahahah");
+                clip.play();
+                $("#div").hide("slow");
+                $("#haha").show();
+            }
+
+            function showKelly(){                
+                $("#kali").hide();
+                $("#kellyBtn").hide();
+                $("#kellyDescription").show();
+                $("#kaliBtn").show();
+                $("#kelly").show("slow");
+            }
+
+            function showKali(){
+                $("#kellyDescription").hide();
+                $("#kelly").hide();
+                $("#kaliBtn").hide();
+                $("#kellyBtn").show();
+                $("#kali").show("slow");
+            }
+        </script>
+    </body>
+</html>
